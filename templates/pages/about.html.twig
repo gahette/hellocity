@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+{#- -------------autre façon d'écrire le titre------------ -#}
+{# {% block title 'About Us | ' ~ parent() %} #}
+{#- ------------------------------------------------------ -#}
+
+{% block title %}About Us | {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <img src="{{ asset('images/Logo.svg') }}" width="200" alt="logo" class="my-12 rounded-full shadow-md">
+
+    <h1 class="text-gray-700">Built with <span class="text-pink-500">&hearts;</span> by LES TEACHERS DU NET.</h1>
+
+    <p class="mt-5">
+        <a href="{{ path('app_home') }}" class="text-indigo-500 hover:text-indigo-600 underline">
+            Revenir à la page d'accueil
+        </a>
+    </p>
+
+{% endblock %}
